@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="100dp"
+        android:indeterminateDrawable="@drawable/indeterminate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb"
+        app:layout_constraintEnd_toEndOf="@id/pb"
+        app:layout_constraintStart_toStartOf="@id/pb"
+        app:layout_constraintTop_toTopOf="@id/pb">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.dullyoung.fakedingtalk.BottomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            app:cardBackgroundColor="#50000000"
+            app:cardCornerRadius="17dp">
+
+            <com.dullyoung.fakedingtalk.MScrollView
+                android:id="@+id/sv"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#115d1a"
+                android:overScrollMode="never">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="1234567890abcdefghijklmnopqrstuvwxyz" />
+            </com.dullyoung.fakedingtalk.MScrollView>
+        </androidx.cardview.widget.CardView>
+    </com.dullyoung.fakedingtalk.BottomToolBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
